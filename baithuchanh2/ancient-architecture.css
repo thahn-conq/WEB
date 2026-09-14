@@ -9,17 +9,20 @@ body{
     color: #000000;
     font-size: 16px;
     width: 1180px;
-    margin: 0 auto; /* căn giữa container */
+    margin: 0 auto;
+    /* can giua container */
+
 }
 img{
     width: 1100px;
     height: 450px;
 }
 .img-container{
-    width: 1600px;
+    width: 100%; /*1600px đang bị tràn viền, tràn khối */
     height: 450px;
-    margin-top: 45px;
-    margin-bottom: 45px;
+    margin-top: 65px;
+   /* margin-bottom: 45px; */
+    text-align: center;
 }
 h1{
     font-size: 60px;
@@ -38,22 +41,37 @@ nav li{
     display: inline-block;
     margin-left: 20px;
 }
+nav > li > a{
+    font-weight: bold;
+    color: #0a2d4a;
+}
 nav li:nth-child(1), li:nth-child(7){
     font-weight: bold;
 }
 /* main */
-main{
+main {
     display: flex;
+    gap: 30px;
+    text-align: center;
+    margin-top: 20px;
 }
-
+article p {
+    text-align: justify;
+    line-height: 1.4;
+}
 a{
     font-size: 28px;
     color: #000000;
     text-decoration: none; /*bỏ dấu gạch chân dưới hypelink */
 }
-p:nth-child(1){
+article > h3 > a{
+    color: blue;
+
+}
+article p:nth-of-type(1)::first-letter {
     font-size: 40px;
-    font-family: EucrosiaUPC, sans-serif;;
+    font-weight: bold;
+    font-family: 'EucrosiaUPC', sans-serif;
 }
 span > a{
     background: url(images/bg2.jpg);
@@ -66,12 +84,13 @@ article > img{
     height: 200px;
     margin-bottom: 20px;
 }
-.comments{
-    top: 7px;
-    padding: 10px;
-    right: 5px;
-    position: relative; /* */
-    content: url("images/comment.png");
+article p:last-of-type span:first-of-type a::before{
+content: url("images/comment.png");
+position: relative;
+right: 5px;
+top: 7px;
+padding: 10px;
+margin-top: 20px;
 }
 /* footer */
 footer{
