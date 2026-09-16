@@ -1,5 +1,5 @@
 * {
-  margin: 0;
+  margin: 0 auto;
   padding: 0;
   box-sizing: border-box; /* giúp phần tử không bị phình thêm khi thêm margin, padding */
 }
@@ -14,7 +14,7 @@ header{
     margin-bottom: 15px;
 }
 main{
-    margin: 0 15px;
+    /* margin: 0 15px;*/
 }
 h1 , h2, h3{
     font-family: 'Forte', arial, sans-serif;
@@ -44,10 +44,10 @@ p{
     line-height: 20px;
 }
 .article-content p:nth-of-type(1) {
-  color: #94c258; /* Màu xanh lá */
+  color: #94c258;
 }
 .article-content p:nth-of-type(2) {
-  color: #ffffff; /* Màu xanh dương */
+  color: #ffffff;
 }
 figure img{
     width: 500px;
@@ -80,6 +80,7 @@ nav a{
     margin: 5px 2px;
     padding: 7px 10px 4px;  /* padding: [top] [right/left] [bottom]; */  
 }
+/*pseudo-class (lớp giả) */
 nav li:nth-child(1) a{
     color: #7cb3e9;
     text-transform:lowercase;
